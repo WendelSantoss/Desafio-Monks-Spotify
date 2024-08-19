@@ -4,12 +4,14 @@ import { useEffect, useState } from "react"
 import Loader from "../loader";
 import CardArtista from "../cardArtista";
 
+import { useAcessTokenContext } from "@/context/accessTokenContext";
 import { useDadosContext } from "@/context/dadosContext";
 import UseGetArtistData from "@/service/hooks/useGetArtistsData"
 
 export default function PopRankScreen(){
     const [ loading, setLoading ]= useState(true)
 
+    const { accessToken }= useAcessTokenContext();
     const { popArtistsDados } = useDadosContext(); 
     const { getAllArtistData }= UseGetArtistData();
 
