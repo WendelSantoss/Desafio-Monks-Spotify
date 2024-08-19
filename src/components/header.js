@@ -14,7 +14,7 @@ export default function Header(){
                 <nav className=" flex gap-28 mr-16">
                     <Link 
                         className=" hover:scale-150 transition-transform duration-[600ms] "
-                        href='#'
+                        href='/popRank'
                     > 
                         <p className=" text-white font-bold ">
                             Rank dos Artistas Pop
