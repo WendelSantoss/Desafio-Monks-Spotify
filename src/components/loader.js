@@ -1,6 +1,7 @@
 export default function Loader(){
     return(
-        <div className=" flex items-center justify-center "> 
+        
+        <div className=" flex items-center justify-center h-[350px]"> 
                     
             <p className=" text-2xl text-white font-bold ">Dados sendo carregados  </p>
             <div  
@@ -11,6 +12,6 @@ export default function Loader(){
                 }}
             ></div>
     
-            </div>    
+        </div>    
     )
 }

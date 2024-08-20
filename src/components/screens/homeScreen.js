@@ -7,10 +7,11 @@ import Loader from "../loader";
 import CardArtista from "../cardArtista";
 
 export default function HomeScreen(){
-    const {accessToken}= useAcessTokenContext();
-    const {getAllArtistData}= UseGetArtistData();
-    const [ loading, setLoading]= useState(true);
-    const [ artistasList, setArtistasList]= useState(null);
+    const [ loading, setLoading ]= useState(true);
+    const [ artistasList, setArtistasList ]= useState(null);
+
+    const { accessToken }= useAcessTokenContext();
+    const { getAllArtistData }= UseGetArtistData();
 
     const buscaDados= async ()=>{
         try {
@@ -35,9 +36,9 @@ export default function HomeScreen(){
         <>
         <section className=" px-[2%] flex flex-col gap-3 py-5">
             {loading ?
-                <div className=" flex justify-center items-center h-[350px]">
-                    <Loader/>
-                </div>
+                
+                <Loader/>
+              
             :
                 <>
                     <h2 className=" mx-8 text-white font-bold">
@@ -47,7 +48,7 @@ export default function HomeScreen(){
                     {artistasList.map((item, index)=>{
                         //time dinamico para passaar um delay de aparição diferente pra cada card
                         const tempoSlide = `${index * 250}ms`
-                        return <CardArtista dados={item} tempoSlide={tempoSlide}/> 
+                        return <CardArtista dados={item} tempoSlide={tempoSlide} key={item.id}/> 
                     
                     })}
                 </>
