@@ -22,7 +22,7 @@ export default function Header(){
                     </Link>
                     <Link 
                         className=" text-white hover:scale-150 transition-transform duration-[600ms] font-bold " 
-                        href='#'
+                        href='/generoRank'
                     > 
                         <p className=" text-white font-bold ">
                             Rank dos Gêneros
