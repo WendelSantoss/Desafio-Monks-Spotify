@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       screens: {//adiciona o breakpoint personalizado para responsivo
         '743px': {'max': '743px'}, 
+        '687px': {'max': '687px'}, 
         '523px': {'max': '523px'}, 
         '418px': {'max': '418px'}, 
       },

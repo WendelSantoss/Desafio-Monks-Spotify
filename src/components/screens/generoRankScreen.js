@@ -49,7 +49,7 @@ export default function GeneroRankScrenn(){
 
     return(
         <>
-        <section className=" px-[2%] flex flex-col gap-3 py-5">
+        <section className=" px-[2%] flex flex-col gap-3 py-5 523px:py-2">
 
            {loading?
                <Loader/>
@@ -57,9 +57,12 @@ export default function GeneroRankScrenn(){
                :
                
                <>
-                   <h2 className=" mx-8 text-white font-bold">
-                       Rank dos 5 Gêneros mais comuns, dentre os artistas pesquisados
-                   </h2>
+                    <h2 
+                        className=" mx-8 text-white font-bold 743px:text-[13px]
+                        523px:mx-5 523px:text-[11px] 418px:text-[10px] "
+                    >
+                        Rank dos 5 Gêneros mais comuns, dentre os artistas pesquisados
+                    </h2>
                     {generoRank.map((item, index)=>{
                        //time dinamico para passaar um delay de aparição diferente pra cada card
                        const tempoSlide = `${index * 250}ms`

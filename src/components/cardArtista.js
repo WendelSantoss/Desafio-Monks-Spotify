@@ -49,12 +49,12 @@ export default function CardArtista({dados, tempoSlide}){
                             418px:mt-0"
                         >
                             <h4 
-                                className="text-white 743px:text-[12px] 523px:text-[9px] 
+                                className="text-white text-[13px] 743px:text-[12px] 523px:text-[9px] 
                                 418px:text-[8px] 418px:mt-[1px]">
                                 Gênero:
                             </h4>
                             <p 
-                                className="text-white font-bold text-[12px] mt-[1px] 523px:text-[9px]
+                                className="text-white font-bold text-[13px] mt-[1px] 523px:text-[9px]
                                 418px:text-[8px] ">
                                 {quantidadeGenero()}.
                             </p>
@@ -63,12 +63,12 @@ export default function CardArtista({dados, tempoSlide}){
 
                         <div className="flex gap-2 mt-1 items-center 523px:gap-[3px] 418px:mt-[2px]">
                             <h4 
-                                className="text-white 743px:text-[12px] 523px:text-[10px] 
+                                className="text-white text-[13px] 743px:text-[12px] 523px:text-[10px] 
                                 418px:text-[8px] 418px:mt-[1px]">
                                 Seguidores:
                             </h4>
                             <p 
-                                className="text-white font-bold text-[14px] mt-[1px] 743px:text-xs
+                                className="text-white font-bold text-[13px] mt-[1px] 743px:text-xs
                                 523px:text-[10px] 418px:text-[8px]">
                                 {dados.followers.total} followers.
                             </p>
