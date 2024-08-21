@@ -7,13 +7,18 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {//adiciona o breakpoint personalizado para responsivo
+        '743px': {'max': '743px'}, 
+        '523px': {'max': '523px'}, 
+        '418px': {'max': '418px'}, 
+      },
       keyframes: {
-        slideIn: {
+        slideIn: {//adiciona efeito para o slide dos cards
           '0%': { transform: 'translateX(-100%)', opacity: '0' },
-          '100%': { transform: 'translateX(0)', opacity: '1' },
+          '100%': { transform: 'translateX(0)', opacity: '1' }, 
         },
       },
-      animation: {
+      animation: {//adiciona efeito para o slide dos cards
         slideIn: 'slideIn 0.5s ease forwards',
       },
       backgroundImage: {

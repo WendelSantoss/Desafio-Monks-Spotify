@@ -47,7 +47,7 @@ export default function PopRankScreen(){
 
     return(
         <>
-         <section className=" px-[2%] flex flex-col gap-3 py-5">
+         <section className=" px-[2%] flex flex-col gap-3 py-5 523px:py-2">
 
             {loading?
                 <Loader/>
@@ -55,7 +55,10 @@ export default function PopRankScreen(){
                 :
                 
                 <>
-                    <h2 className=" mx-8 text-white font-bold">
+                    <h2 
+                        className=" mx-8 text-white font-bold 743px:text-sm 523px:text-xs
+                        523px:mx-5 418px:text-[10px]"
+                    >
                         Rank dos Artistas Pop, ordenados por números de seguidores
                     </h2>
                     {popArtistsDados.map((item, index)=>{
