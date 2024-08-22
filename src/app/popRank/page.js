@@ -12,7 +12,7 @@ export default function PopRankPage(){
 
     useEffect(() => {
         if(!accessToken) {
-            console.log("entrou aqui 1")
+            
             //se não houver accessToken, caso o usuario acesse diretamente a
             //rota dessa page, aqui solicitamos um para poder resgatar os dados
             getAcessToken();

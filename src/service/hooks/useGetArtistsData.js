@@ -4,8 +4,14 @@ import { artistIds } from "@/data/dataArtists";
 import { useDadosContext } from "@/context/dadosContext";
 
 
+
 export default function UseGetArtistData(){
-    const {filtraOrdenaArtistasPop, filtraOrdenaGeneroRank}= useDadosContext();
+    const {
+        filtraOrdenaArtistasPop, 
+        filtraOrdenaGeneroRank, 
+        popArtistsDados,
+        generoRank
+    }= useDadosContext();
     const {accessToken}= useAcessTokenContext();
 
     //funcao para buscar dados de um determinado artista através de seu Id
@@ -35,20 +41,23 @@ export default function UseGetArtistData(){
             const artistsData = await Promise.all(artistPromises); 
 
             if(artistsData){
-                //funcao que filtra e seta a lista de artistas pop no dadosContext.
+                //funcao que filtra e seta a lista de artistas pop no dadosContext
                 filtraOrdenaArtistasPop(artistsData)
 
-                //funcao que filtra e seta a lista dos 5 generos mais comuns no dadosContext.
+                //funcao que filtra e seta a lista dos 5 generos mais comuns no dadosContext
                 filtraOrdenaGeneroRank(artistsData)
-
             }
             return artistsData; 
 
         }catch(error){
             console.error("Erro ao buscar dados dos artistas:", error.message);
+
+            return null
+           
         }
     }
-    
+
+
     return{
         getArtistData,
         getAllArtistData

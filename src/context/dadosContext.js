@@ -7,6 +7,7 @@ export function DadosProvider (props) {
   const [ popArtistsDados, setPopArtistsDados ]= useState(null);
   const [ generoRank, setGeneroRank ]= useState(null) 
 
+
   
   const filtraOrdenaArtistasPop = (allDados)=>{
     
@@ -40,7 +41,7 @@ export function DadosProvider (props) {
 
     //aqui realizamos o corte do array pegando os primeiros 5 generos mais comuns
     const top5Genres = ordenandoGeneros.slice(0, 5);
-    console.log("ordenando", top5Genres)
+
 
     setGeneroRank(top5Genres)
   }

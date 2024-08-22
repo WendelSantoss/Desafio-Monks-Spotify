@@ -24,7 +24,7 @@ export function AuthAcessToken() {
           },
         }
       );
-      console.log("token", response?.data.access_token)
+    
       setAccessToken(response?.data.access_token)
       return response.data.access_token
 

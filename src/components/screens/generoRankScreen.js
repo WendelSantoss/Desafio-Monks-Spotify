@@ -4,6 +4,7 @@ import UseGetArtistData from "@/service/hooks/useGetArtistsData";
 import { useDadosContext } from "@/context/dadosContext";
 import { useAcessTokenContext } from "@/context/accessTokenContext";
 
+import ErroMessage from "../erroMessage";
 import Loader from "../loader";
 import CardGenero from "../cardGenero";
 import {CapasGenero} from "@/data/capasGeneros"
@@ -11,6 +12,7 @@ import {CapasGenero} from "@/data/capasGeneros"
 
 export default function GeneroRankScrenn(){
     const [ loading, setLoading ]= useState(true)
+    const [ errorMessage, setErrorMessage]= useState(false)
 
     const { accessToken }= useAcessTokenContext();
     const { generoRank } = useDadosContext(); 
@@ -22,25 +24,33 @@ export default function GeneroRankScrenn(){
             const response= await getAllArtistData();
        
             if(response){
-              
+                
                 setLoading(false)   
+            }else{
+                console.log("entramos aqui com response nulo")
+                setLoading(false) 
+                //setando o estado erro verdadeiro para poder retornar para o usuário 
+                //uma mensagem informando a situação, caso o retorno response seja nulo
+                setErrorMessage(true)
             }
         }catch(error){
-            console.log(error.message)
+            return error
         }
     }
 
     
     useEffect(() => {
+        
+        
         //caso o usuario acesse diretamente a rota dessa page e ja tenhamos
         //um acessToken, aqui salvaremos os dados no DadosContext
         if(accessToken && !generoRank){
-            console.log("entrou aqui 2")
             buscaDados();
+        
         }else if(generoRank){
             //aqui seria a condiçao de quando o usuario acesse essa rota 
             //com o fluxo normal atraves da homepage
-            console.log("entrou aqui 3")
+            
             setLoading(false);
         }
     }, [accessToken, generoRank]);
@@ -51,11 +61,17 @@ export default function GeneroRankScrenn(){
         <>
         <section className=" px-[2%] flex flex-col gap-3 py-5 523px:py-2">
 
-           {loading?
-               <Loader/>
-               
-               :
-               
+            {errorMessage && 
+                <ErroMessage/>
+            }
+
+            
+            {loading &&
+                <Loader/>
+            }
+
+
+            {!loading && generoRank &&           
                <>
                     <h2 
                         className=" mx-8 text-white font-bold 743px:text-[13px]
@@ -81,7 +97,7 @@ export default function GeneroRankScrenn(){
                                 />
                     })}
                </>
-           }
+            }
 
         </section>
        </>
