@@ -2,8 +2,8 @@ import { useAcessTokenContext } from "@/context/accessTokenContext"
 import { API } from "../api";
 import { artistIds } from "@/data/dataArtists";
 import { useDadosContext } from "@/context/dadosContext";
-
-
+import { useEffect } from "react";
+import { PostRanksData } from "../postRanksData";
 
 export default function UseGetArtistData(){
     const {
@@ -57,6 +57,14 @@ export default function UseGetArtistData(){
         }
     }
 
+    useEffect(() => {
+        //verifica se ambos popArtistsDados e generoRank foram setados corretamente
+        if(popArtistsDados && generoRank){
+
+            //chamando a função para post com os dados filtrados e ordenados
+            PostRanksData(popArtistsDados, generoRank);
+        }
+    }, [popArtistsDados, generoRank]);
 
     return{
         getArtistData,
