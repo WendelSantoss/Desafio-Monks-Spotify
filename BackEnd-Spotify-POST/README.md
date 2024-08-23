@@ -26,7 +26,7 @@ Este é o back-end do Desafio da .Monks Spotify, desenvolvido em Node.js. O back
 
 Copie o código, abra o bash ou terminal:<br>
 ```
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/WendelSantoss/Desafio-Monks-Spotify.git
 ```
 
 - Navegue até o diretório do back-end:
