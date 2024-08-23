@@ -47,7 +47,7 @@ npm install
 
 Copie o código, abra o bash ou terminal:<br>
 ```
-node index.js
+node src/index.js
 ```
 
 - O servidor estará rodando na porta 4000.
