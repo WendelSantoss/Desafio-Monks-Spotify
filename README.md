@@ -14,7 +14,7 @@ Este repositório contém o código completo de um desafio técnico, incluindo t
 
 Copie o código, abra o bash ou terminal:<br>
 ```
-git clone https://github.com/WendelSantoss/Desafio-Monks-Spotify.git
+git clone https://github.com/WendelSantoss/Desafio-Tecnico-Spotify.git
 ```
 
 - Após clonar, siga as instruções específicas em cada pasta (FrontEnd-Desafio e BackEnd-Desafio) para configurar e iniciar o projeto.
