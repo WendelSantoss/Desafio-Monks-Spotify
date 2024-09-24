@@ -1,5 +1,5 @@
-## Monks Desafio Spotify - Repositório Fullstack
-Este repositório contém o código completo do desafio da .Monks, incluindo tanto o Front-End quanto o Back-End. O objetivo do projeto é consumir dados da API do Spotify, processá-los e enviá-los para uma API externa, conforme solicitado no enunciado do desafio.
+## Desafio Spotify - Repositório Fullstack
+Este repositório contém o código completo de um desafio técnico, incluindo tanto o Front-End quanto o Back-End. O objetivo do projeto é consumir dados da API do Spotify, processá-los e enviá-los para uma API externa, conforme solicitado por um desafio.
 
 ## Estrutura do Repositório
 - FrontEnd-Spotify: Contém todo o código e estrutura para o front-end do projeto. Inclui um README com instruções detalhadas sobre como configurar e rodar a aplicação.
@@ -17,4 +17,4 @@ Copie o código, abra o bash ou terminal:<br>
 git clone https://github.com/WendelSantoss/Desafio-Monks-Spotify.git
 ```
 
-- Após clonar, siga as instruções específicas em cada pasta (FrontEnd-Monks-Desafio e BackEnd-Monks-Desafio) para configurar e iniciar o projeto.
+- Após clonar, siga as instruções específicas em cada pasta (FrontEnd-Desafio e BackEnd-Desafio) para configurar e iniciar o projeto.
