@@ -2,7 +2,7 @@ const axios = require('axios');
 
 async function sendPostRequest(data){
     //url pra onde sera enviada as duas listas com os ranks solicitados
-    const postUrl = "https://psel-solution-automation-cf-ubqz773kaq-uc.a.run.app?access_token=bC2lWA5c7mt1rSPR";
+    const postUrl = "https://Url_de_Exemplo.com";
     
     try {
         const response = await axios.post(postUrl, data, {headers: {"Content-Type": "application/json"}});
