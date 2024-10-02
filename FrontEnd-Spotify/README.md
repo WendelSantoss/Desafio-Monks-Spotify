@@ -1,5 +1,5 @@
-## FrontEnd-Monks-Desafio 🎧
-Este repositório contém o código-fonte do front-end do desafio proposto pela Monks. A aplicação é uma interface web responsiva que consome a API do Spotify para exibir rankings de artistas e gêneros musicais, de uma lista pré-selecionada por eles. 
+## FrontEnd-Desafio 🎧
+Este repositório contém o código-fonte do front-end do desafio técnico. A aplicação é uma interface web responsiva que consome a API do Spotify para exibir rankings de artistas e gêneros musicais, de uma lista pré-selecionada por eles. 
 
 A proposta é construir um script que puxa as informações da API do Spotify, e realizar o devido tratamento dos dados extraídos, criando duas listas ordenadas: uma com os artistas do gênero pop ordenados por número de seguidores e outra com os 5 gêneros mais comuns entre estes artistas. Sendo necessário retornar em tela o Nome da/do artista, quantidade de seguidores e Popularidade (índice).
 
@@ -16,7 +16,7 @@ A proposta é construir um script que puxa as informações da API do Spotify, e
 
 - Responsividade e Animações: Layout totalmente responsivo, adaptado para diferentes resoluções de tela, garantindo uma experiência de usuário consistente em dispositivos móveis e desktop. Além disso, a aplicação conta com animações de slides e scale, otimizando ainda mais a experiência do usuário.
 
-- Home Page: A HomePage da aplicação conta com um header, com os links de navegação para as páginas com os ranks e para home page clicando na logo da .Monks. Além disso, ocorre a renderização dos cards dos 15 artistas selecionados pela .Monks, a serem pesquisados por esta solução.
+- Home Page: A HomePage da aplicação conta com um header, com os links de navegação para as páginas com os ranks e para home page clicando na logo da Empresa. Além disso, ocorre a renderização dos cards dos 15 artistas selecionados pelo desafio, a serem pesquisados por esta solução.
     <div aling='center'>
     <img src="./public/homePage.png"/>
     </div> 
@@ -53,7 +53,7 @@ A proposta é construir um script que puxa as informações da API do Spotify, e
 
 Copie o código abaixo, abra o bash ou terminal e cole:<br>
 ```
-git clone https://github.com/WendelSantoss/Desafio-Monks-Spotify.git
+git clone https://github.com/WendelSantoss/Desafio-Tecnico-Spotify.git
 ```
 
 - Navegue até a pasta do projeto:
@@ -97,4 +97,4 @@ no seu ambiente local. Logo, se você deseja visualizar se esta requisção est�
 
 ## Deploy
 
-No momento, a aplicação não possui nenhum deploy, porém passará por ajustes, após a avaliação do time .Monks, para deploy na vercel.
+No momento, a aplicação não possui nenhum deploy, porém passará por ajustes, para deploy na vercel.
